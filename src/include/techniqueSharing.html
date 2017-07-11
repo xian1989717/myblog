@@ -1,0 +1,31 @@
+<script id="test" type="text/html">
+    {{each user as v}}
+    <div class="clearfix">
+        <a href="../src/php/content.php?id={{v.id}}&type=2"><img src="{{v.titleImg}}" class="f_left" alt=""></a>
+        <div class="f_left">
+            <p><a href="../src/php/content.php?id={{v.id}}&type=2">{{v.headline}}</a></p>
+            <p>{{v.label}}</p>
+            <p><span>作者：{{v.author}}</span><span>{{v.time}}</span><span>点击率:{{v.clickRate}}</span></p>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<main class="ban_xin clearfix">
+    <div id="content" class="technique_sharing f_left">
+    </div>
+</main>
+
+
+<script>
+    (function () {
+        $.ajax({
+            url: "src/php/mainTechniquesharing.php",
+            dataType: "json",
+            success: function (data) {
+                document.getElementById('content').innerHTML = template('test', data);
+            }
+        });
+    })();
+</script>

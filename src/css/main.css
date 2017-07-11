@@ -1,0 +1,65 @@
+main {
+  min-width: 1200px;
+}
+main .technique_sharing,
+main .myself_log {
+  width: 70%;
+  position: relative;
+}
+main .technique_sharing > h2,
+main .myself_log > h2 {
+  margin: 5px;
+}
+main .technique_sharing > a,
+main .myself_log > a {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+main .technique_sharing > div,
+main .myself_log > div {
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+main .technique_sharing > div > a,
+main .myself_log > div > a {
+  display: block;
+}
+main .technique_sharing > div > a > img,
+main .myself_log > div > a > img {
+  width: 200px;
+}
+main .technique_sharing > div > div,
+main .myself_log > div > div {
+  margin-left: 20px;
+}
+main .technique_sharing > div > div > p,
+main .myself_log > div > div > p {
+  font-size: 14px;
+  margin: 30px 0;
+}
+main .technique_sharing > div > div > p > span,
+main .myself_log > div > div > p > span {
+  margin-right: 20px;
+}
+main .technique_sharing > div > div > p:nth-of-type(1) > a,
+main .myself_log > div > div > p:nth-of-type(1) > a {
+  display: block;
+  width: 100%;
+  color: #ffda00;
+  font-size: 20px;
+}
+main .hot_word {
+  width: 30%;
+  box-sizing: border-box;
+}
+main .hot_word > h2 {
+  margin: 10px 0 10px 10px;
+}
+main .hot_word > p {
+  margin: 10px 0 10px 10px;
+}
+main .hot_word > p > a > span {
+  color: red;
+  margin-right: 20px;
+}

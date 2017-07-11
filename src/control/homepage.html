@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/angularJS v1.6.5/angular.js"></script>
+    <script charset="utf-8" src="../lib/kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="../lib/kindeditor/zh-CN.js"></script>
+</head>
+<body>
+<header>
+    <h1>后台管理</h1>
+</header>
+<main class="ban_xin clearfix">
+    <div class="clearfix">
+        <a class="f_right" href="AllContent.php">全部内容</a>
+    </div>
+    <div id="nav" class="f_left">
+        <div tit="1">
+            <a href="javascript:;">技术分享,个人日志</a>
+        </div>
+        <div tit="2">
+            <a href="javascript:;">照片墙</a>
+        </div>
+        <div tit="3">
+            <a href="javascript:;">个人简介</a>
+        </div>
+        <div tit="4">
+            <a href="javascript:;">联系我</a>
+        </div>
+    </div>
+    <div id="content" class="f_left">
+        <div class="share_log">
+            <form method="post" action="controller/homepage.php" enctype="multipart/form-data">
+                <table>
+                    <th><h3>技术分享,个人日志设置</h3></th>
+                    <tbody>
+                    <tr>
+                        <td>标题:</td>
+                        <td><input name="title" type="text" style="width:400px;line-height: 20px"></td>
+                    </tr>
+                    <tr>
+                        <td>类型:</td>
+                        <td>
+                            <select name="text_type" id="" style="width:100px;line-height: 20px;">
+                                <option value="technique_sharing">技术分享</option>
+                                <option value="mine_log">个人日志</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>作者:</td>
+                        <td><input name="author" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>标签:</td>
+                        <td><input name="label" type="text" style="width:400px;"></td>
+                    </tr>
+
+                    <tr>
+                        <td>缩略照片:</td>
+                        <td><input type="file" name="pic"></td>
+                    </tr>
+                    <tr>
+                        <td>描述:</td>
+                        <td><textarea name="describe" cols="100" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>内容:</td>
+                        <td>
+                            <textarea id="editor_id" name="content" style="width:885px;height:500px;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;display: inline-block">
+                            <input type="submit" value="提交" style="width: 100px;line-height: 40px;border-radius: 5px;">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="pic">
+            <h3>照片墙设置</h3>
+            <div class="createDirectory"><a href="javascript:;">创建文件夹</a></div>
+            <div class="picCon clearfix">
+                <span>风景</span>
+                <span class="linkParent">
+                    <a href="javascript:;">上传照片</a>
+                    <a href="">查看详情</a>
+                    <a href="">删除</a>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3>个人简介设置</h3>
+        </div>
+        <div>
+            <h3>联系我设置</h3>
+        </div>
+    </div>
+    <div class="upload">
+        <form action="">
+            <input type="file">
+            <input class="submit" type="submit">
+        </form>
+    </div>
+</main>
+</body>
+<script src="../js/homepage.js"></script>
+</html>
