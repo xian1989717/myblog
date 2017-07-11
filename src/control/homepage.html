@@ -104,10 +104,25 @@
         </div>
     </div>
     <div class="upload">
-        <form action="">
-            <input type="file">
-            <input class="submit" type="submit">
-        </form>
+        <table>
+            <form action="controller/picUpdate.php" method="POST">
+                <tr>
+                    <td>照片</td>
+                    <td><input name="picFile" type="file"></td>
+                </tr>
+                <tr>
+                    <td>描述</td>
+                    <td>
+                        <textarea name="picDescribe" id="picDescribe" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input style="margin-left:100px;width: 100px;line-height: 30px;" class="submit" type="submit">
+                    </td>
+                </tr>
+            </form>
+        </table>
     </div>
 </main>
 </body>
