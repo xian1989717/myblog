@@ -5,9 +5,20 @@
     <title>Title</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/homepage.css">
+    <style>
+        .picIput {
+            line-height: 23px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
 
+        .createPicDir {
+            line-height: 23px;
+            padding: 0 5px;
+        }
+    </style>
     <script src="../lib/jquery/jquery.js"></script>
-    <script src="../lib/angularJS v1.6.5/angular.js"></script>
+    <script src="../lib/vue/vue1026.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/kindeditor-all.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/zh-CN.js"></script>
 </head>
@@ -15,7 +26,7 @@
 <header>
     <h1>后台管理</h1>
 </header>
-<main class="ban_xin clearfix">
+<main id="app" class="ban_xin clearfix">
     <div class="clearfix">
         <a class="f_right" href="AllContent.php">全部内容</a>
     </div>
@@ -24,7 +35,7 @@
             <a href="javascript:;">技术分享,个人日志</a>
         </div>
         <div tit="2">
-            <a href="javascript:;">照片墙</a>
+            <a href="javascript:;" @click="selectPicDir">照片墙</a>
         </div>
         <div tit="3">
             <a href="javascript:;">个人简介</a>
@@ -86,11 +97,14 @@
         </div>
         <div class="pic">
             <h3>照片墙设置</h3>
-            <div class="createDirectory"><a href="javascript:;">创建文件夹</a></div>
-            <div class="picCon clearfix">
-                <span>风景</span>
+            <div class="createDirectory">
+                照片文件夹:<input class="picIput" type="text" v-model="picName">
+                <input class="createPicDir" type="button" value="创建文件夹" @click="submit">
+            </div>
+            <div class="picCon clearfix" v-for="item in list">
+                <span>{{item}}</span>
                 <span class="linkParent">
-                    <a href="javascript:;">上传照片</a>
+                    <a href="javascript:;" @click="updataPic">上传照片</a>
                     <a href="">查看详情</a>
                     <a href="">删除</a>
                 </span>
@@ -105,10 +119,10 @@
     </div>
     <div class="upload">
         <table>
-            <form action="controller/picUpdate.php" method="POST">
+            <form action="controller/picUpdate.php" method="POST" enctype="multipart/form-data">
                 <tr>
                     <td>照片</td>
-                    <td><input name="picFile" type="file"></td>
+                    <td><input type="file" name="picFile"></td>
                 </tr>
                 <tr>
                     <td>描述</td>
@@ -118,7 +132,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input style="margin-left:100px;width: 100px;line-height: 30px;" class="submit" type="submit">
+                        <input style="margin-left:100px;width: 100px;line-height: 30px;" type="submit" value="提交">
                     </td>
                 </tr>
             </form>

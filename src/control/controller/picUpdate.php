@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: xian1
- * Date: 2017/7/11
- * Time: 20:03
- */
+
 include "../../php/connectMysql.php";
 
 
 //1.获取上传文件信息
 $upfile = $_FILES["picFile"];
+
 //定义允许的类型
 $typelist = array("image/jpeg", "image/jpg", "image/png", "image/gif");
 $path = "../../uploads/";//定义一个上传后的目录
@@ -61,3 +57,29 @@ if (is_uploaded_file($upfile["tmp_name"])) {
 } else {
     die("不是一个上传文件!");
 }
+
+
+$db_table = "myblog";
+
+if (!mysql_select_db($db_table)) {
+    echo "查询数据表失败" . mysqli_error();
+}
+
+mysql_query("INSERT INTO picContent() VALUES()");
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+

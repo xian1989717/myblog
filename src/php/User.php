@@ -17,4 +17,5 @@ class User
     public $time;
     public $label;
     public $textType;
+    public $picDir;
 }

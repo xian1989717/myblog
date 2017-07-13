@@ -3,7 +3,7 @@ include "../../php/connectMysql.php";
 
 
 //1.获取上传文件信息
-$upfile = $_FILES["file"];
+$upfile = $_FILES["pic"];
 //定义允许的类型
 $typelist = array("image/jpeg", "image/jpg", "image/png", "image/gif");
 $path = "../../uploads/";//定义一个上传后的目录
