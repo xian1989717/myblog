@@ -67,8 +67,6 @@ if (!mysql_select_db($db_table)) {
 
 mysql_query("INSERT INTO picContent() VALUES()");
 
-
-
 ?>
 
 

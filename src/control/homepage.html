@@ -19,6 +19,7 @@
     </style>
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/vue/vue1026.js"></script>
+    <script src="../lib/vue/vue-resource121.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/kindeditor-all.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/zh-CN.js"></script>
 </head>
@@ -35,7 +36,7 @@
             <a href="javascript:;">技术分享,个人日志</a>
         </div>
         <div tit="2">
-            <a href="javascript:;" @click="selectPicDir">照片墙</a>
+            <a href="javascript:;" @click="selectPicDir" >照片墙</a>
         </div>
         <div tit="3">
             <a href="javascript:;">个人简介</a>
@@ -101,12 +102,12 @@
                 照片文件夹:<input class="picIput" type="text" v-model="picName">
                 <input class="createPicDir" type="button" value="创建文件夹" @click="submit">
             </div>
-            <div class="picCon clearfix" v-for="item in list">
-                <span>{{item}}</span>
+            <div class="picCon clearfix" v-show="isShow" v-for="item in list">
+                <span>{{item.picName}}</span>
                 <span class="linkParent">
                     <a href="javascript:;" @click="updataPic">上传照片</a>
                     <a href="">查看详情</a>
-                    <a href="">删除</a>
+                    <a @click="delPicDir(item.id,item.picName)" href="javascript:;">删除</a>
                 </span>
             </div>
         </div>

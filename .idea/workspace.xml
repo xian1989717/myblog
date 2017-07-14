@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="858cf11b-a587-4d0b-960d-c5aa972755fe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/angularJS v1.6.5/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lib/vue/vue.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/controller/homepage.php" afterPath="$PROJECT_DIR$/src/control/controller/homepage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/controller/createPicDir.php" afterPath="$PROJECT_DIR$/src/control/controller/createPicDir.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/controller/picUpdate.php" afterPath="$PROJECT_DIR$/src/control/controller/picUpdate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/controller/selectPicDir.php" afterPath="$PROJECT_DIR$/src/control/controller/selectPicDir.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/homepage.html" afterPath="$PROJECT_DIR$/src/control/homepage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/homepage.js" afterPath="$PROJECT_DIR$/src/js/homepage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/User.php" afterPath="$PROJECT_DIR$/src/php/User.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,14 +18,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.2525707">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="homepage.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/control/homepage.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="143" column="7" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
+                <state relative-caret-position="209">
+                  <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="33" />
                   <folding>
                     <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -35,6 +33,9 @@
                     <element signature="n#div#3;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#form#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#0;n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#1;n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#2;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#3;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#3;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -51,13 +52,26 @@
           <file leaf-file-name="selectPicDir.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/control/controller/selectPicDir.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                <state relative-caret-position="377">
+                  <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
                   <folding>
                     <element signature="e#6#86#0#PHP" expanded="true" />
-                    <marker date="1499905549853" expanded="true" signature="275:317" ph="SELECT * FRO... where" />
-                    <marker date="1499905549853" expanded="true" signature="276:317" ph="SELECT disti... pic_content" />
-                    <marker date="1499905549853" expanded="true" signature="282:317" ph="select disti... pic_content" />
+                    <marker date="1500016046868" expanded="true" signature="311:346" ph="SELECT * FRO... where" />
+                    <marker date="1500016046868" expanded="true" signature="312:346" ph="SELECT disti... pic_content" />
+                    <marker date="1500016046868" expanded="true" signature="318:346" ph="select disti... pic_content" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="delPicDir.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/control/controller/delPicDir.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="487">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#6#86#0#PHP" expanded="true" />
+                    <marker date="1500016833050" expanded="true" signature="362:412" ph="DELETE FROM " />
                   </folding>
                 </state>
               </provider>
@@ -66,11 +80,17 @@
           <file leaf-file-name="createPicDir.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/control/controller/createPicDir.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="377">
+                  <caret line="32" column="30" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="32" selection-end-column="30" />
                   <folding>
                     <element signature="e#6#86#0#PHP" expanded="true" />
-                    <marker date="1499864186078" expanded="true" signature="395:447" ph="INSERT INTO pic_content... " />
+                    <marker date="1500015212230" expanded="true" signature="449:501" ph="INSERT INTO pic_content... " />
+                    <marker date="1500015212230" expanded="true" signature="578:608" ph="SELECT COUNT... $" />
+                    <marker date="1500015212230" expanded="true" signature="578:619" ph="SELECT DISTI... pic_content" />
+                    <marker date="1500015212230" expanded="true" signature="584:585" ph="select disti... 表名" />
+                    <marker date="1500015212230" expanded="true" signature="619:757" ph="UPDATE pic_c... " />
+                    <marker date="1500015212230" expanded="true" signature="681:726" ph="UPDATE pic_c... " />
+                    <marker date="1500015212230" expanded="true" signature="681:752" ph="UPDATE pic_c... " />
                   </folding>
                 </state>
               </provider>
@@ -79,11 +99,11 @@
           <file leaf-file-name="picUpdate.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/control/controller/picUpdate.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                <state relative-caret-position="47">
+                  <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
                   <folding>
-                    <marker date="1499856768529" expanded="true" signature="1524:1536" ph="INSERT INTO details... " />
-                    <marker date="1499856768529" expanded="true" signature="1524:1557" ph="INSERT INTO picContent... " />
+                    <marker date="1499924973724" expanded="true" signature="1524:1536" ph="INSERT INTO details... " />
+                    <marker date="1499924973724" expanded="true" signature="1524:1557" ph="INSERT INTO picContent... " />
                   </folding>
                 </state>
               </provider>
@@ -92,8 +112,8 @@
           <file leaf-file-name="homepage.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/homepage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1230">
-                  <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+                <state relative-caret-position="814">
+                  <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -123,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/include/contactUs.html" />
-        <option value="$PROJECT_DIR$/src/css/head.less" />
         <option value="$PROJECT_DIR$/src/css/base.css" />
         <option value="$PROJECT_DIR$/src/css/footer.less" />
         <option value="$PROJECT_DIR$/src/include/footer.html" />
@@ -167,12 +185,14 @@
         <option value="$PROJECT_DIR$/src/control/homepage.php" />
         <option value="$PROJECT_DIR$/src/css/homepage.less" />
         <option value="$PROJECT_DIR$/src/control/controller/homepage.php" />
-        <option value="$PROJECT_DIR$/src/control/controller/picUpdate.php" />
         <option value="$PROJECT_DIR$/src/control/controller/createDir.php" />
-        <option value="$PROJECT_DIR$/src/control/homepage.html" />
-        <option value="$PROJECT_DIR$/src/control/controller/createPicDir.php" />
         <option value="$PROJECT_DIR$/src/php/User.php" />
+        <option value="$PROJECT_DIR$/src/control/controller/picUpdate.php" />
+        <option value="$PROJECT_DIR$/src/php/PicDirId.php" />
+        <option value="$PROJECT_DIR$/src/control/controller/createPicDir.php" />
         <option value="$PROJECT_DIR$/src/control/controller/selectPicDir.php" />
+        <option value="$PROJECT_DIR$/src/control/homepage.html" />
+        <option value="$PROJECT_DIR$/src/control/controller/delPicDir.php" />
         <option value="$PROJECT_DIR$/src/js/homepage.js" />
       </list>
     </option>
@@ -209,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -333,6 +352,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,19 +364,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\wamp\www\blogs\src\lib\vue" />
-      <recent name="D:\wamp\www\blogs\src\lib\bootstrap" />
-      <recent name="D:\wamp\www\blogs\src\images" />
-      <recent name="D:\wamp\www\blogs\src\lib\artTemplate" />
-      <recent name="D:\wamp\www\blogs\src\lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp\www\blogs\src\control\controller" />
       <recent name="D:\wamp\www\blogs\src\lib" />
       <recent name="D:\wamp\www\blogs\src" />
       <recent name="D:\wamp\www\blogs\src\js" />
       <recent name="D:\wamp\www\blogs\src\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\blogs\src\lib\vue" />
+      <recent name="D:\wamp\www\blogs\src\lib\bootstrap" />
+      <recent name="D:\wamp\www\blogs\src\images" />
+      <recent name="D:\wamp\www\blogs\src\lib\artTemplate" />
+      <recent name="D:\wamp\www\blogs\src\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -487,16 +507,21 @@
       <workItem from="1499854020565" duration="11842000" />
       <workItem from="1499867824266" duration="6242000" />
       <workItem from="1499904303240" duration="2325000" />
+      <workItem from="1499923755288" duration="8240000" />
+      <workItem from="1499939465706" duration="11793000" />
+      <workItem from="1499952690211" duration="886000" />
+      <workItem from="1500011617324" duration="5853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191520000" />
+    <option name="totallyTimeSpent" value="218292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18830334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18766066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -547,9 +572,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/control/test.php" />
-    <entry file="file://$PROJECT_DIR$/src/control/controller/doupload.php" />
-    <entry file="file://$PROJECT_DIR$/src/control/test2.php" />
     <entry file="file://$PROJECT_DIR$/src/php/uploadImg.php" />
     <entry file="file://$PROJECT_DIR$/src/lib/artTemplate/artTemplate.js" />
     <entry file="file://$PROJECT_DIR$/src/lib/artTemplate/template.js">
@@ -726,18 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/controller/del.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1499494799760" expanded="true" signature="207:240" ph="SELECT * FRO... details" />
-            <marker date="1499494799760" expanded="true" signature="412:441" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -745,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,9 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
           <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding>
-            <marker date="1499761184893" expanded="true" signature="1151:1172" ph="SELECT * FRO... details" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,9 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,16 +791,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-968">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/vue/vue-resource121.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/controller/del.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/mainMyselfLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
-            <marker date="1499776447364" expanded="true" signature="1758:1971" ph="INSERT INTO details... " />
+            <marker date="1499408272210" expanded="true" signature="185:243" ph="SELECT * FRO... details" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/controller/picUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <marker date="1499924973724" expanded="true" signature="1524:1536" ph="INSERT INTO details... " />
+            <marker date="1499924973724" expanded="true" signature="1524:1557" ph="INSERT INTO picContent... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/PicDirId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/controller/createPicDir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1500015212230" expanded="true" signature="449:501" ph="INSERT INTO pic_content... " />
+            <marker date="1500015212230" expanded="true" signature="578:608" ph="SELECT COUNT... $" />
+            <marker date="1500015212230" expanded="true" signature="578:619" ph="SELECT DISTI... pic_content" />
+            <marker date="1500015212230" expanded="true" signature="584:585" ph="select disti... 表名" />
+            <marker date="1500015212230" expanded="true" signature="619:757" ph="UPDATE pic_c... " />
+            <marker date="1500015212230" expanded="true" signature="681:726" ph="UPDATE pic_c... " />
+            <marker date="1500015212230" expanded="true" signature="681:752" ph="UPDATE pic_c... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/controller/selectPicDir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1500016046868" expanded="true" signature="311:346" ph="SELECT * FRO... where" />
+            <marker date="1500016046868" expanded="true" signature="312:346" ph="SELECT disti... pic_content" />
+            <marker date="1500016046868" expanded="true" signature="318:346" ph="select disti... pic_content" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/controller/delPicDir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1500016833050" expanded="true" signature="362:412" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/control/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="143" column="7" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
+        <state relative-caret-position="209">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="33" />
           <folding>
             <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -805,6 +896,9 @@
             <element signature="n#div#3;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#form#0;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -813,63 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/mainMyselfLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <marker date="1499408272210" expanded="true" signature="185:243" ph="SELECT * FRO... details" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/controller/selectPicDir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-            <marker date="1499905549853" expanded="true" signature="275:317" ph="SELECT * FRO... where" />
-            <marker date="1499905549853" expanded="true" signature="276:317" ph="SELECT disti... pic_content" />
-            <marker date="1499905549853" expanded="true" signature="282:317" ph="select disti... pic_content" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/controller/createPicDir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-            <marker date="1499864186078" expanded="true" signature="395:447" ph="INSERT INTO pic_content... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/controller/picUpdate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <marker date="1499856768529" expanded="true" signature="1524:1536" ph="INSERT INTO details... " />
-            <marker date="1499856768529" expanded="true" signature="1524:1557" ph="INSERT INTO picContent... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/homepage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="814">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding />
         </state>
       </provider>

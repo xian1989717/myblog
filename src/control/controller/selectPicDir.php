@@ -8,6 +8,7 @@
 
 include "../../php/connectMysql.php";
 include "../../php/User.php";
+include "../../php/PicDirId.php";
 
 $db_table = "myblog";
 
@@ -15,14 +16,18 @@ if (!mysql_select_db($db_table)) {
     echo "连接数据库失败!" . mysql_error();
 }
 
-$res = mysql_query(" SELECT distinct file_url from pic_content");
+$query = mysql_query(" SELECT distinct * from pic_content");
 
 
-while ($row = mysql_fetch_assoc($res)) {
-
-    $data[] = $row['file_url'];
-
+while ($row = mysql_fetch_assoc($query)) {
+    $picDirId = new PicDirId();
+    $picDirId->picDir = $row['file_url'];
+    $picDirId->id = $row['picdirid'];
+    $data[] = $picDirId;
 };
-echo json_encode($data);
+
+if (!@count($data) == 0) {
+    echo json_encode($data);
+}
 
 
