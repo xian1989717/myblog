@@ -12,6 +12,8 @@ $db_table = "myblog";
 
 $picName = $_GET['name'];
 
+echo $picName;
+
 //检查文件夹是否存在
 if (!file_exists('../../uploads/' . $picName)) {
     if (!mysql_select_db($db_table)) {

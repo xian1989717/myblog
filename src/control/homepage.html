@@ -5,47 +5,14 @@
     <title>Title</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/homepage.css">
-    <style>
-        .picIput {
-            line-height: 23px;
-            border: 1px solid #ccc;
-            margin-right: 10px;
-        }
-
-        .createPicDir {
-            line-height: 23px;
-            padding: 0 5px;
-        }
-    </style>
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/vue/vue1026.js"></script>
     <script src="../lib/vue/vue-resource121.js"></script>
+    <script src="../lib/vue/vue-router1.0.min.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/kindeditor-all.js"></script>
     <script charset="utf-8" src="../lib/kindeditor/zh-CN.js"></script>
-</head>
-<body>
-<header>
-    <h1>后台管理</h1>
-</header>
-<main id="app" class="ban_xin clearfix">
-    <div class="clearfix">
-        <a class="f_right" href="AllContent.php">全部内容</a>
-    </div>
-    <div id="nav" class="f_left">
-        <div tit="1">
-            <a href="javascript:;">技术分享,个人日志</a>
-        </div>
-        <div tit="2">
-            <a href="javascript:;" @click="selectPicDir" >照片墙</a>
-        </div>
-        <div tit="3">
-            <a href="javascript:;">个人简介</a>
-        </div>
-        <div tit="4">
-            <a href="javascript:;">联系我</a>
-        </div>
-    </div>
-    <div id="content" class="f_left">
+
+    <script type="text/template" id="tpl">
         <div class="share_log">
             <form method="post" action="controller/homepage.php" enctype="multipart/form-data">
                 <table>
@@ -96,6 +63,8 @@
                 </table>
             </form>
         </div>
+    </script>
+    <script type="text/template" id="tp2">
         <div class="pic">
             <h3>照片墙设置</h3>
             <div class="createDirectory">
@@ -103,24 +72,56 @@
                 <input class="createPicDir" type="button" value="创建文件夹" @click="submit">
             </div>
             <div class="picCon clearfix" v-show="isShow" v-for="item in list">
-                <span>{{item.picName}}</span>
+                <span class="picDirName">{{item.picName}}</span>
+                <input type="text" class="changeDirName" value="{{item.picName}}">
                 <span class="linkParent">
+                    <a href="javascript:;" @click="changeDirName(item.id,item.picName)">修改文件名</a>
                     <a href="javascript:;" @click="updataPic">上传照片</a>
-                    <a href="">查看详情</a>
+                    <a href="javascript:;">查看详情</a>
                     <a @click="delPicDir(item.id,item.picName)" href="javascript:;">删除</a>
                 </span>
             </div>
         </div>
+    </script>
+    <script type="text/template" id="tp3">
         <div>
             <h3>个人简介设置</h3>
         </div>
+    </script>
+    <script type="text/template" id="tp4">
         <div>
             <h3>联系我设置</h3>
         </div>
+    </script>
+</head>
+<body id="app">
+<header>
+    <h1>后台管理</h1>
+</header>
+<main class="ban_xin clearfix">
+    <div class="clearfix">
+        <a class="f_right" href="AllContent.php">全部内容</a>
+    </div>
+    <div id="nav" class="f_left">
+        <div @click="touch" tit="1">
+            <a href="#" v-link="{path:'/TechniqueSharing'}"> 技术分享,个人日志</a>
+        </div>
+        <div @click="touch" tit="2">
+            <a href="#" v-link="{path:'/pic'}">照片墙</a>
+        </div>
+        <div @click="touch" tit="3">
+            <a href="#" v-link="{path:'/myself'}">个人简介</a>
+        </div>
+        <div @click="touch" tit="4">
+            <a href="#" v-link="{path:'/connectMine'}">联系我</a>
+        </div>
+    </div>
+    <div id="content" class="f_left">
+        <router-view></router-view>
     </div>
     <div class="upload">
         <table>
-            <form action="controller/picUpdate.php" method="POST" enctype="multipart/form-data">
+            <form action="controller/picUpdate.php" method="POST">
                 <tr>
                     <td>照片</td>
                     <td><input type="file" name="picFile"></td>
@@ -138,8 +139,10 @@
                 </tr>
             </form>
         </table>
+        <button class="close" @click="close">关闭</button>
     </div>
 </main>
+<div class="shade"></div>
 </body>
 <script src="../js/homepage.js"></script>
 </html>

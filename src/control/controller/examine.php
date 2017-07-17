@@ -19,9 +19,6 @@ $id = $_GET['id'];
 $res = mysql_query("SELECT * FROM details where id = $id");
 
 $row = mysql_fetch_assoc($res);
-//echo "<pre>";
-//print_r($row);
-//echo "<pre>";
 ?>
 
 
