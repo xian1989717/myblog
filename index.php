@@ -22,16 +22,17 @@ switch ($id) {
     case 2:
         echo "<link rel='stylesheet' href='src/css/techniqueSharing.css'>";
         include "src/include/techniqueSharing.html";
+        echo "<script src='src/js/main.js'></script>";
         break;
     case 3:
         echo "<link rel='stylesheet' href='src/css/techniqueSharing.css'>";
         include "src/include/log.html";
         break;
     case 4:
+        echo "<link rel='stylesheet' href='src/css/pic.css'>";
         include "src/include/pic.html";
         break;
     case 5:
-
         include "src/include/resume.html";
         break;
     case 6:

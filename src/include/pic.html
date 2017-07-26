@@ -1,3 +1,30 @@
-<mian>
+<script id="test" type="text/html">
+    {{each pic as v}}
+    <a class="f_left" href="src/include/picContent.html?dir_name={{v.dirName}}" title="这是一个照片">
+        <div class="imgWrap">
+            <img class="img" src="src/images/bg.jpg" alt="">
+            <p>{{v.fileUrl}}</p>
+        </div>
+    </a>
+    {{/each}}
+</script>
 
-</mian>
+<main class="ban_xin">
+    <div id="content" class="clearfix">
+
+    </div>
+</main>
+
+
+<script>
+    (function () {
+        $.ajax({
+            url: "src/php/pic.php",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                document.getElementById('content').innerHTML = template('test', data);
+            }
+        });
+    })();
+</script>

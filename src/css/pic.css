@@ -1,0 +1,12 @@
+#content {
+  margin: 20px 0;
+}
+#content .imgWrap {
+  width: 304px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+#content .imgWrap .img {
+  width: 300px;
+}

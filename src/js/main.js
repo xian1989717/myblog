@@ -1,6 +1,8 @@
 /**
  * Created by xian1 on 2017/7/5.
  */
+
+//这个是技术分享
 (function () {
     $.ajax({
         url: "src/php/mainTechniquesharing.php",
@@ -11,6 +13,7 @@
     });
 })();
 
+//这个是个人简介
 (function () {
     $.ajax({
         url: "src/php/mainMyselfLog.php",

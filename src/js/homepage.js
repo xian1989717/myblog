@@ -6,6 +6,7 @@ KindEditor.ready(function (K) {
 });
 (function () {
     var router = new VueRouter();
+
     var App = Vue.extend({
         methods: {
             touch: function () {
@@ -27,7 +28,8 @@ KindEditor.ready(function (K) {
                 list: [],
                 picName: '',
                 isShow: true,
-                changeName: "修改名称"
+                changeName: "修改名称",
+                dirName: ""    //照片存储的字文件夹
             }
         },
         created: function () {
@@ -56,9 +58,10 @@ KindEditor.ready(function (K) {
                     }
                 });
             },
-            updataPic: function () {
+            updataPic: function (name) {
                 $(".shade").css("display", "block");
                 $(".upload").css("display", "block");
+                document.getElementById("test").setAttribute("value", name);
             },
             changeDirName: function (id, name) {
                 var e = event;
@@ -81,6 +84,7 @@ KindEditor.ready(function (K) {
             delPicDir: function (id, picName) {
                 this.$http.get("../control/controller/delPicDir.php?picDirId=" + id + "&picName=" + picName).then(function (response) {
                     if (response.body == "success") {
+                        console.log("11111");
                         this.selectPicDir();
                     }
                 });

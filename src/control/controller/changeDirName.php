@@ -21,8 +21,8 @@ $picOldDirName = $_GET['picOldDirName'];
 
 
 $res = mysql_query("UPDATE pic_content SET file_url = '$picNewDirName' WHERE picdirid='$id'");
-$changeDirName = rename('../../uploads/' . $picOldDirName, '../../uploads/' . $picNewDirName);
 
-if ($res && $changeDirName) {
+
+if ($res) {
     echo "success";
 }

@@ -76,7 +76,7 @@
                 <input type="text" class="changeDirName" value="{{item.picName}}">
                 <span class="linkParent">
                     <a href="javascript:;" @click="changeDirName(item.id,item.picName)">修改文件名</a>
-                    <a href="javascript:;" @click="updataPic">上传照片</a>
+                    <a href="javascript:;" @click="updataPic(item.picName)">上传照片</a>
                     <a href="javascript:;">查看详情</a>
                     <a @click="delPicDir(item.id,item.picName)" href="javascript:;">删除</a>
                 </span>
@@ -120,8 +120,12 @@
         <router-view></router-view>
     </div>
     <div class="upload">
-        <table>
-            <form action="controller/picUpdate.php" method="POST">
+        <form action="controller/picUpdate.php" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>名称</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
                 <tr>
                     <td>照片</td>
                     <td><input type="file" name="picFile"></td>
@@ -133,12 +137,15 @@
                     </td>
                 </tr>
                 <tr>
+                    <input id="test" type="hidden" name="dirName" value="">
+                </tr>
+                <tr>
                     <td colspan="2">
                         <input style="margin-left:100px;width: 100px;line-height: 30px;" type="submit" value="提交">
                     </td>
                 </tr>
-            </form>
-        </table>
+            </table>
+        </form>
         <button class="close" @click="close">关闭</button>
     </div>
 </main>

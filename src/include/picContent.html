@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script id="test" type="text/html">
+
+
+    </script>
+</head>
+<body>
+<header>
+    <div class="ban_xin">
+        <h3>易水寒</h3>
+        <ul class="clearfix">
+            <li><a href="../../index.php?id=1">首页</a></li>
+            <li><a href="../../index.php?id=2">技术分享</a></li>
+            <li><a href="../../index.php?id=3">个人日志</a></li>
+            <li><a href="../../index.php?id=4">照片墙</a></li>
+            <li><a href="../../index.php?id=5">个人简介</a></li>
+            <li><a href="../../index.php?id=6">联系我</a></li>
+        </ul>
+    </div>
+</header>
+<footer>
+    <div class="ban_xin clearfix">
+        <div class="link f_left">
+            <h2>友情链接</h2>
+            <span><a target="_blank" href="http://www.monkeyblog.cn/">Monkey前端博客</a></span>
+            <span><a target="_blank" href="http://www.w3school.com.cn/">W3C学习指南</a></span>
+            <span><a target="_blank" href="http://kindeditor.net/demo.php">kindEditor</a></span>
+            <span><a target="_blank" href="http://www.chinaz.com/">站长之家</a></span>
+            <span><a target="_blank" href="http://isux.tencent.com/css3/tools.html">Css3工具</a></span>
+            <span><a target="_blank" href="https://www.oschina.net/">开源社区</a></span>
+            <span><a target="_blank" href="https://www.hcharts.cn/">HIGHCHARTS</a></span>
+            <span><a target="_blank" href="http://jquery.cuishifeng.cn/">Jquery在线文档</a></span>
+            <span><a target="_blank" href="http://www.swiper.com.cn/">swiper</a></span>
+            <span><a target="_blank" href="http://es6.ruanyifeng.com/">ECMAScript 6入门</a></span>
+        </div>
+        <div class="erweima f_right">
+            <h2>微信</h2>
+            <img src="../images/erweima.png" alt="">
+        </div>
+    </div>
+</footer>
+<script>
+    var parms = location.search;
+    var picDirName = parms.substring(1).split("=")[1];
+    (function () {
+        $.ajax({
+            url: "src/php/pic.php?picDirName=" + picDirName,
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                document.getElementById('content').innerHTML = template('test', data);
+            }
+        });
+    })();
+</script>
+</body>

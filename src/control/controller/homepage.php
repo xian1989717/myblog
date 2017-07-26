@@ -76,7 +76,6 @@ if ($res) {
     echo "<div id='div'>更新成功!5秒后跳转到编辑页面!</div>";
     ?>
     <script>
-        console.log("1111");
         var num = 5;
         var div = document.getElementById("div");
         var timer = setInterval(function () {
@@ -88,8 +87,6 @@ if ($res) {
             }
         }, 1000);
     </script>
-
-
     <?php
 }
 ?>

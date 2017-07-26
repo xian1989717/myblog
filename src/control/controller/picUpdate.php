@@ -1,14 +1,34 @@
 <?php
-
 include "../../php/connectMysql.php";
 
+//连接数据库
+$db_table = "myblog";
+if (!mysql_select_db($db_table)) {
+    echo "连接数据表失败" . mysql_error();
+}
 
 //1.获取上传文件信息
 $upfile = $_FILES["picFile"];
+//获得file_url的值
+$tempDirName = $_POST['dirName'];
+
+
+//获取图片描述信息
+$picDescribe = $_POST['picDescribe'];
+
+
+//得到真正的服务器上面的文件夹的名称
+$res = mysql_fetch_assoc(mysql_query("SELECT * FROM pic_content where file_url = '$tempDirName'"));
+$dirName = $res['dir_name'];
+
 
 //定义允许的类型
 $typelist = array("image/jpeg", "image/jpg", "image/png", "image/gif");
-$path = "../../uploads/";//定义一个上传后的目录
+
+//文件夹路径
+$path = "../../uploads/" . $dirName . "/";
+
+
 //2.过滤上传文件的错误号
 if ($upfile["error"] > 0) {
     switch ($upfile['error']) {//获取错误信息
@@ -58,14 +78,15 @@ if (is_uploaded_file($upfile["tmp_name"])) {
     die("不是一个上传文件!");
 }
 
+$imgUrl = "http://www.blogs.com/src/uploads/" . $dirName."/".$newfile;
 
-$db_table = "myblog";
+$res = mysql_query("INSERT INTO `$dirName`(time,pic_url,pic_describe,img_parent_folder)
+                                                  VALUES(now(),'$imgUrl','$picDescribe','$dirName')");
 
-if (!mysql_select_db($db_table)) {
-    echo "查询数据表失败" . mysqli_error();
+
+if($res){
+    header("Location:../homepage.html#!/pic");
 }
-
-mysql_query("INSERT INTO picContent() VALUES()");
 
 ?>
 
