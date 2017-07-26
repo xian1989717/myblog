@@ -33,7 +33,7 @@ if (!file_exists('../../uploads/' . $picName)) {
     mysql_query("UPDATE pic_content SET dir_name = '$dirName' WHERE file_url='$picName' ");
 
 
-    mysql_query("CREATE TABLE `" . $dirName . "` (`id` bigint(1) NOT NULL AUTO_INCREMENT,`time` varchar(50) DEFAULT NULL,`pic_url` varchar(255) DEFAULT NULL,`pic_describe` longtext DEFAULT NULL,`img_parent_folder` varchar(255) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;");
+    mysql_query("CREATE TABLE `" . $dirName . "` (`id` bigint(1) NOT NULL AUTO_INCREMENT,`time` varchar(50) DEFAULT NULL,`img_title` varchar(50) DEFAULT NULL,`pic_url` varchar(255) DEFAULT NULL,`pic_describe` longtext DEFAULT NULL,`img_parent_folder` varchar(255) DEFAULT NULL,PRIMARY KEY (`id`)) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;");
 
     //创建对象,把file_url 和id写到对象里面
     $picDirId = new PicDirId();

@@ -12,7 +12,8 @@ $upfile = $_FILES["picFile"];
 //获得file_url的值
 $tempDirName = $_POST['dirName'];
 
-
+//获取图片标题
+$picTitle = $_POST['name'];
 //获取图片描述信息
 $picDescribe = $_POST['picDescribe'];
 
@@ -78,13 +79,13 @@ if (is_uploaded_file($upfile["tmp_name"])) {
     die("不是一个上传文件!");
 }
 
-$imgUrl = "http://www.blogs.com/src/uploads/" . $dirName."/".$newfile;
+$imgUrl = "http://www.blogs.com/src/uploads/" . $dirName . "/" . $newfile;
 
-$res = mysql_query("INSERT INTO `$dirName`(time,pic_url,pic_describe,img_parent_folder)
-                                                  VALUES(now(),'$imgUrl','$picDescribe','$dirName')");
+$res = mysql_query("INSERT INTO `$dirName`(time,img_title,pic_url,pic_describe,img_parent_folder)
+                                                  VALUES(now(),'$picTitle','$imgUrl','$picDescribe','$dirName')");
 
 
-if($res){
+if ($res) {
     header("Location:../homepage.html#!/pic");
 }
 

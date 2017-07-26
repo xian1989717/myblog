@@ -10,4 +10,9 @@ class picContent
 {
     public $fileUrl;
     public $dirName;
+    public $time;
+    public $picUrl;
+    public $picDescribe;
+    public $picTitle;
+
 }

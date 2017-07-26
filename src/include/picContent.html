@@ -9,9 +9,47 @@
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../lib/artTemplate/template.js"></script>
     <script id="test" type="text/html">
-
-
+        {{each user as v}}
+        <a class="f_left" href="#" title="这是一个照片">
+            <div class="imgWrap">
+                <img class="img" src="{{v.picUrl}}" alt="" title="上传时间{{v.time}}">
+                <h3>{{v.picTitle}}</h3>
+                <div>{{v.picDescribe}}</div>
+            </div>
+        </a>
+        {{/each}}
     </script>
+    <style>
+        #content {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        #content > a {
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        .imgWrap {
+            margin: 10px;
+            width: 240px;
+            height: 240px;
+
+        }
+
+        .imgWrap > .img {
+            width: 220px;
+            height: 170px;
+        }
+
+        .imgWrap > div, h3 {
+            width: 220px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -27,6 +65,12 @@
         </ul>
     </div>
 </header>
+
+<div id="content" class="ban_xin">
+
+</div>
+
+
 <footer>
     <div class="ban_xin clearfix">
         <div class="link f_left">
@@ -53,7 +97,7 @@
     var picDirName = parms.substring(1).split("=")[1];
     (function () {
         $.ajax({
-            url: "src/php/pic.php?picDirName=" + picDirName,
+            url: "../php/displayPic.php?picDirName=" + picDirName,
             dataType: "json",
             success: function (data) {
                 console.log(data);
