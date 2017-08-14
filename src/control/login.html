@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>后台登录</title>
+    <script src="../lib/jquery/jquery.js"></script>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 <div>
-    <form method="post" action="controller/login.php">
-        <h1>后台管理</h1>
-        <label for="account">账号:</label>
-        <input name="account" type="text" placeholder="请输入管理员账号" id="account"><br/>
-        <label for="password">密码:</label>
-        <input name="password" type="password" placeholder="请输入管理员密码" id="password"><br/>
-        <input type="hidden" name="chris" value="liu">
-        <input type="submit" value="登 录">
-    </form>
+    <h1>后台管理</h1>
+    <label for="account">账号:</label>
+    <input name="account" type="text" placeholder="请输入管理员账号" id="account"><br/>
+    <label for="password">密码:</label>
+    <input name="password" type="password" placeholder="请输入管理员密码" id="password"><br/>
+    <input type="hidden" id="chr" name="chris" value="liu">
+    <input id="but" type="button" value="登 录">
 </div>
 </body>
+<script>
+    $("#but").on("click", function () {
+        var userName = document.getElementById("account").value;
+        var password = document.getElementById("password").value;
+        var chr = document.getElementById("chr").value;
+        $.post('./controller/login.php', {account: userName, password: password, chris: chr}, function (data) {
+            var res = data.split(";");
+            var obj = {};
+            for (var i in res) {
+                obj[res[i].split("=")[0]] = res[i].split("=")[1];
+            }
+            document.cookie = "name=" + obj['name'];
+            document.cookie = "cookieVar=" + obj['cookieVar'];
+            location.href = "./homepage.html";
+        });
+    });
+</script>
 </html>

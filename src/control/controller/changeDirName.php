@@ -15,6 +15,8 @@ if (!mysql_select_db($db_table)) {
     echo "连接数据库失败" . mysql_error();
 }
 
+
+
 $id = $_GET["id"];
 $picNewDirName = $_GET['picNewDirName'];
 $picOldDirName = $_GET['picOldDirName'];

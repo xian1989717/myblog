@@ -2,7 +2,7 @@
     <h2>个人日志</h2>
     {{each user as v}}
     <div class="clearfix">
-        <a href="../src/php/content.php?id={{v.id}}&type=3"><img src="{{v.titleImg}}" class="f_left" alt=""></a>
+        <a href="../src/php/content.php?id={{v.id}}&type=3"><img src="{{v.titleImg}}" class="f_left"></a>
         <div class="f_left">
             <p><a href="../src/php/content.php?id={{v.id}}&type=3">{{v.headline}}</a></p>
             <p>{{v.label}}</p>
@@ -11,41 +11,9 @@
     </div>
     {{/each}}
 </script>
+
 <main class="ban_xin clearfix">
     <div id="log" class="technique_sharing f_left">
-        <div class="clearfix">
-            <!--文章图片-->
-            <a href="javascrpt:;"><img class="f_left" src="http://osfvschvz.bkt.clouddn.com/object.png" alt=""></a>
-            <div class="f_left">
-                <!--文章标题-->
-                <p><a href="javascript:;">Javascript 面向对象编程（一）：封装</a></p>
-                <!--文章的简要介绍-->
-                <p>面向对象第一篇</p>
-                <p><span>作者:阮一峰</span><span>2017-7-3</span><span>点击率:10</span></p>
-            </div>
-        </div>
-        <div class="clearfix">
-            <!--文章图片-->
-            <a href="javascrpt:;"><img class="f_left" src="http://osfvschvz.bkt.clouddn.com/object.png" alt=""></a>
-            <div class="f_left">
-                <!--文章标题-->
-                <p><a href="javascript:;">Javascript 面向对象编程（一）：封装</a></p>
-                <!--文章的简要介绍-->
-                <p>面向对象第一篇</p>
-                <p><span>作者:阮一峰</span><span>2017-7-3</span><span>点击率:10</span></p>
-            </div>
-        </div>
-        <div class="clearfix">
-            <!--文章图片-->
-            <a href="javascrpt:;"><img class="f_left" src="http://osfvschvz.bkt.clouddn.com/object.png" alt=""></a>
-            <div class="f_left">
-                <!--文章标题-->
-                <p><a href="javascript:;">Javascript 面向对象编程（一）：封装</a></p>
-                <!--文章的简要介绍-->
-                <p>面向对象第一篇</p>
-                <p><span>作者:阮一峰</span><span>2017-7-3</span><span>点击率:10</span></p>
-            </div>
-        </div>
     </div>
 </main>
 

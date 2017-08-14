@@ -8,6 +8,7 @@
         url: "src/php/mainTechniquesharing.php",
         dataType: "json",
         success: function (data) {
+            console.log(data);
             document.getElementById('content').innerHTML = template('test', data);
         }
     });

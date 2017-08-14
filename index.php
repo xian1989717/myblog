@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>我的博客</title>
     <link rel="stylesheet" href="src/css/base.css">
     <link rel="stylesheet" href="src/css/head.css">
     <link rel="stylesheet" href="src/css/footer.css">
